@@ -1,0 +1,17 @@
+Package: m6APrediction
+Type: Package
+Title: Powerful m6A Prediction Tool
+Version: 1.0.0
+Authors@R: 
+    person(given = "Hongyao", family = "Yang", 
+           email = "yanghongyao9@gmail.com", 
+           role = c("aut", "cre"))
+Description: This package provides functions to predict m6A modification sites in RNA sequences using machine learning models trained on sequence features. It includes prediction functions with high accuracy demonstrated by ROC and PRC metrics.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends: R (>= 3.5.0)
+Imports: 
+    randomForest,
+    stats
