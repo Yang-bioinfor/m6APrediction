@@ -15,3 +15,5 @@ Depends: R (>= 3.5.0)
 Imports: 
     randomForest,
     stats
+URL: https://github.com/Yang-bioinfor/m6APrediction
+BugReports: https://github.com/Yang-bioinfor/m6APrediction/issues
