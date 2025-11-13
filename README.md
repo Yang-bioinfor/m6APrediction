@@ -1,10 +1,11 @@
 # m6APrediction: A Machine Learning Tool for Predicting m6A Modification Sites in RNA
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![R build status](https://github.com/Yang-bioinfor/m6APrediction/workflows/R-CMD-check/badge.svg)](https://github.com/Yang-bioinfor/m6APrediction/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![R build status](https://github.com/Yang-bioinfor/m6APrediction/workflows/R-CMD-check/badge.svg)](https://github.com/Yang-bioinfor/m6APrediction/actions)
 
 ------------------------------------------------------------------------
 
-## Overview {#overview}
+## Overview
 
 **m6APrediction** is an R package for predicting **N6-methyladenosine (m6A) modification sites** in RNA sequences.\
 m6A is one of the most prevalent internal RNA modifications, playing key roles in gene expression regulation, RNA stability, and disease mechanisms such as cancer.
@@ -13,7 +14,7 @@ The package uses a **random forest** machine learning model trained on sequence 
 
 ------------------------------------------------------------------------
 
-## Installation {#installation}
+## Installation
 
 ### Using remotes
 
@@ -71,10 +72,10 @@ print(single_result)
 ## Model Performance {#Model Performance}
 
 <p align="center">
-
-![ROC Curve](inst/figure/ROC_curve.png){alt="ROC Curve" height="auto"} ![PRC Curve](inst/figure/PRC_curve.png){alt="PRC Curve" height="auto"}
-
+  <img src="inst/figure/ROC_curve.png" alt="ROC Curve" width="400"/>
+  <img src="inst/figure/PRC_curve.png" alt="PRC Curve" width="400"/>
 </p>
+
 
 These plots illustrate the strong discriminative power of the **m6APrediction** random forest model.
 
