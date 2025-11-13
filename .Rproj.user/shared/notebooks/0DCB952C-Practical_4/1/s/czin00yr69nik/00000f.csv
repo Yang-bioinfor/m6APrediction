@@ -1,0 +1,7 @@
+"0","library(ggplot2)"
+"0","ggplot(imp_df, aes(x = reorder(Feature, Importance), y = Importance, fill = Importance)) +"
+"0","geom_bar(stat = ""identity"") +"
+"0","coord_flip() +"
+"0","scale_fill_distiller(palette = ""Spectral"") +"
+"0","labs(title = ""Feature Importance of Random Forest Model"", x = ""Feature"", y = ""Importance"") +"
+"0","theme_bw()"

@@ -1,0 +1,5 @@
+"0","set.seed(123)"
+"0","n <- nrow(data_df)"
+"0","train_index <- sample(1:n, size = round(0.8 * n))"
+"0","train_df <- data_df[train_index, ]"
+"0","test_df <- data_df[-train_index, ]"

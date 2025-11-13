@@ -1,0 +1,2 @@
+"0","library(randomForest)"
+"0","rf_fit <- randomForest(m6A_status ~ gc_content + RNA_type + RNA_region + exon_length + distance_to_junction + evolutionary_conservation + nt_pos1 + nt_pos2 + nt_pos4 + nt_pos5, data = train_df)"

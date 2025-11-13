@@ -17,7 +17,7 @@ The package uses a **random forest** machine learning model trained on sequence 
 
 ### Using remotes
 
-```{r}
+``` r
 if (!require("remotes")) install.packages("remotes")
 remotes::install_github("Yang-bioinfor/m6APrediction")
 # Or using devtools
@@ -31,7 +31,7 @@ devtools::install_github("Yang-bioinfor/m6APrediction")
 
 ## Quick Start
 
-```{r}
+``` r
 library(m6APrediction)
 
 #Load pre-trained model
@@ -43,9 +43,9 @@ example_df <- read.csv(system.file("extdata", "m6A_input_example.csv", package =
 head(example_df)
 ```
 
-### Multiple-Samples Prediction 
+### Multiple-Samples Prediction {#Multiple-Samples Prediction}
 
-```{r}
+``` r
 #Predict m6A modification status for multiple samples simultaneously.
 results <- prediction_multiple(model, example_df, positive_threshold = 0.5)
 
@@ -53,9 +53,9 @@ results <- prediction_multiple(model, example_df, positive_threshold = 0.5)
 head(results[, c("DNA_5mer", "predicted_m6A_prob", "predicted_m6A_status")])
 ```
 
-### Single-Sample Prediction
+### Single-Sample Prediction {#Single-Sample Prediction}
 
-```{r}
+``` r
 single_result <- prediction_single( ml_fit = model, 
                                     gc_content = 0.45,
                                     RNA_type = "mRNA", 
