@@ -33,7 +33,7 @@ prediction_single(
 
 \item{evolutionary_conservation}{Numeric conservation score.}
 
-\item{DNA_5mer}{Character 5-mer DNA sequence (e.g. \code{"ATGCC"}).}
+\item{DNA_5mer}{Character 5-mer DNA sequence (e.g., \code{"ATGCC"}).}
 
 \item{positive_threshold}{Numeric threshold (default 0.5).}
 }
@@ -48,17 +48,18 @@ values instead of a data frame. Returns a named vector with the predicted
 probability and status.
 }
 \examples{
+# Load example model included in the package
 model <- readRDS(system.file("extdata", "rf_fit.rds",
-package = "m6APrediction"))
+                             package = "m6APrediction"))
 prediction_single(
-ml_fit = model,
-gc_content = 0.45,
-RNA_type = "mRNA",
-RNA_region = "CDS",
-exon_length = 120,
-distance_to_junction = 30,
-evolutionary_conservation = 0.8,
-DNA_5mer = "ATGCC"
+  ml_fit = model,
+  gc_content = 0.45,
+  RNA_type = "mRNA",
+  RNA_region = "CDS",
+  exon_length = 120,
+  distance_to_junction = 30,
+  evolutionary_conservation = 0.8,
+  DNA_5mer = "ATGCC"
 )
 
 }

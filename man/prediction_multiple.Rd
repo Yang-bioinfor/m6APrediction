@@ -11,15 +11,15 @@ prediction_multiple(ml_fit, feature_df, positive_threshold = 0.5)
 
 \item{feature_df}{Data frame that \strong{must} contain the columns:
 \code{gc_content}, \code{RNA_type}, \code{RNA_region}, \code{exon_length},
-\code{distance_to_junction}, \code{evolutionary_conservation}, \code{DNA_5mer}.}
+\code{distance_to_junction}, \code{evolutionary_conservation}, and \code{DNA_5mer}.}
 
 \item{positive_threshold}{Numeric threshold (default 0.5) above which a
 sample is classified as "Positive".}
 }
 \value{
 The input \code{feature_df} with two additional columns:
-\code{predicted_m6A_prob} (numeric) and \code{predicted_m6A_status} (factor with
-levels \code{c("Negative","Positive")}).
+\code{predicted_m6A_prob} (numeric) and \code{predicted_m6A_status}
+(factor with levels \code{c("Negative", "Positive")}).
 }
 \description{
 Given a data frame of features and a fitted random forest model,
@@ -28,10 +28,11 @@ return the original data frame augmented with two new columns:
 \code{predicted_m6A_status} ("Positive" or "Negative").
 }
 \examples{
+# Load example model and dataset included in the package
 model <- readRDS(system.file("extdata", "rf_fit.rds",
-package = "m6APrediction"))
+                             package = "m6APrediction"))
 df <- read.csv(system.file("extdata", "m6A_input_example.csv",
-package = "m6APrediction"))
+                           package = "m6APrediction"))
 head(prediction_multiple(model, df))
 
 }

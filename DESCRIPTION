@@ -11,9 +11,8 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
-Depends: R (>= 3.5.0)
-Imports: 
-    randomForest,
+Depends: R (>= 3.5.0), randomForest
+Imports:
     stats
 URL: https://github.com/Yang-bioinfor/m6APrediction
 BugReports: https://github.com/Yang-bioinfor/m6APrediction/issues

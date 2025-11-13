@@ -13,10 +13,10 @@ have the same length).}
 \value{
 A data frame with \code{nchar(dna_strings[1])} columns named
 \code{nt_pos1}, \code{nt_pos2}, …, each column being a factor with levels
-\code{c("A","T","C","G")}.
+\code{c("A", "T", "C", "G")}.
 }
 \description{
-Convert a character vector of DNA 5-mers (e.g. "ATGCC") into a one-hot
+Convert a character vector of DNA 5-mers (e.g., "ATGCC") into a one-hot
 encoded data frame where each nucleotide position becomes a factor column
 with levels "A", "T", "C", "G".
 }
