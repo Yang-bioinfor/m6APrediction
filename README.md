@@ -1,11 +1,7 @@
 # m6APrediction: A Machine Learning Tool for Predicting m6A Modification Sites in RNA
 
-<<<<<<< HEAD
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![R build status](https://img.shields.io/badge/R%20build-passing-brightgreen.svg)](https://cran.r-project.org/)
-=======
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-[![R build status](https://github.com/Yang-bioinfor/m6APrediction/workflows/R-CMD-check/badge.svg)](https://github.com/Yang-bioinfor/m6APrediction/actions)
->>>>>>> 317f9914552e03316ee5540c3c3c816baa80b269
+[![R build status](https://img.shields.io/badge/R%20build-passing-brightgreen.svg)](https://cran.r-project.org/)
 
 ------------------------------------------------------------------------
 
@@ -58,7 +54,7 @@ results <- prediction_multiple(model, example_df, positive_threshold = 0.5)
 head(results[, c("DNA_5mer", "predicted_m6A_prob", "predicted_m6A_status")])
 ```
 
-### Single-Sample Prediction
+## Single-Sample Prediction
 
 ``` r
 single_result <- prediction_single( ml_fit = model, 
@@ -73,11 +69,11 @@ single_result <- prediction_single( ml_fit = model,
 print(single_result) 
 ```
 
-## Model Performance {#Model Performance}
+## Model Performance 
 
 <p align="center">
-  <img src="inst/figure/ROC_curve.png" alt="ROC Curve" width="400"/>
-  <img src="inst/figure/PRC_curve.png" alt="PRC Curve" width="400"/>
+  <img src="inst/figure/ROC_curve.png" alt="ROC Curve" width="300"/>
+  <img src="inst/figure/PRC_curve.png" alt="PRC Curve" width="300"/>
 </p>
 
 
