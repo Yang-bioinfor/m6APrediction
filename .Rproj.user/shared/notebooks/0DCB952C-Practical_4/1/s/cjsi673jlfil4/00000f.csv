@@ -1,6 +1,0 @@
-"0","library(ggplot2)"
-"0","ggplot(plot_df, aes(x = FPR, y = recall)) +"
-"0","geom_point(color = ""red"") +"
-"0","geom_line(color = ""red"") +"
-"0","labs(title = ""ROC Curve"", x = ""FPR"", y = ""Recall"") +"
-"0","theme_classic()"

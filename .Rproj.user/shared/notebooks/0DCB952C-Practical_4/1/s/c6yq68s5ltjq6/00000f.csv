@@ -1,5 +1,0 @@
-"0","imp <- randomForest::importance(rf_fit)"
-"0","imp_df <- data.frame(Feature = rownames(imp),"
-"0","Importance = imp[, 1])"
-"0",""
-"0","print(imp_df)"

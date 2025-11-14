@@ -1,6 +1,0 @@
-"0",""
-"0","ggplot(plot_df, aes(x = recall, y = precision)) +"
-"0","geom_point(color = ""blue"") +"
-"0","geom_line(color = ""blue"") +"
-"0","labs(title = ""Precision-Recall Curve"", x = ""Recall"", y = ""Precision"") +"
-"0","theme_classic()"

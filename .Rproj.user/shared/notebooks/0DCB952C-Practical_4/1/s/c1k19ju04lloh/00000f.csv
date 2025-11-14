@@ -1,1 +1,0 @@
-"0","prob_test <- predict(rf_fit, newdata = test_df, type = ""prob"")"
