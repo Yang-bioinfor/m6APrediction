@@ -1,15 +1,10 @@
 # m6APrediction: A Machine Learning Tool for Predicting m6A Modification Sites in RNA
 
-<<<<<<< HEAD
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![R build status](https://img.shields.io/badge/R%20build-passing-brightgreen.svg)](https://cran.r-project.org/)
-=======
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-[![R build status](https://github.com/Yang-bioinfor/m6APrediction/workflows/R-CMD-check/badge.svg)](https://github.com/Yang-bioinfor/m6APrediction/actions)
->>>>>>> 317f9914552e03316ee5540c3c3c816baa80b269
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![R build status](https://github.com/Yang-bioinfor/m6APrediction/workflows/R-CMD-check/badge.svg)](https://github.com/Yang-bioinfor/m6APrediction/actions)
 
 ------------------------------------------------------------------------
 
-## Overview
+## Overview {#overview}
 
 **m6APrediction** is an R package for predicting **N6-methyladenosine (m6A) modification sites** in RNA sequences.\
 m6A is one of the most prevalent internal RNA modifications, playing key roles in gene expression regulation, RNA stability, and disease mechanisms such as cancer.
@@ -18,11 +13,11 @@ The package uses a **random forest** machine learning model trained on sequence 
 
 ------------------------------------------------------------------------
 
-## Installation
+## Installation {#installation}
 
 ### Using remotes
 
-``` r
+```{r}
 if (!require("remotes")) install.packages("remotes")
 remotes::install_github("Yang-bioinfor/m6APrediction")
 # Or using devtools
@@ -36,7 +31,7 @@ devtools::install_github("Yang-bioinfor/m6APrediction")
 
 ## Quick Start
 
-``` r
+```{r}
 library(m6APrediction)
 
 #Load pre-trained model
@@ -50,7 +45,7 @@ head(example_df)
 
 ### Multiple-Samples Prediction
 
-``` r
+```{r}
 #Predict m6A modification status for multiple samples simultaneously.
 results <- prediction_multiple(model, example_df, positive_threshold = 0.5)
 
@@ -60,7 +55,7 @@ head(results[, c("DNA_5mer", "predicted_m6A_prob", "predicted_m6A_status")])
 
 ### Single-Sample Prediction
 
-``` r
+```{r}
 single_result <- prediction_single( ml_fit = model, 
                                     gc_content = 0.45,
                                     RNA_type = "mRNA", 
@@ -76,10 +71,10 @@ print(single_result)
 ## Model Performance {#Model Performance}
 
 <p align="center">
-  <img src="inst/figure/ROC_curve.png" alt="ROC Curve" width="400"/>
-  <img src="inst/figure/PRC_curve.png" alt="PRC Curve" width="400"/>
-</p>
 
+![ROC Curve](inst/figure/ROC_curve.png){alt="ROC Curve" height="auto"} ![PRC Curve](inst/figure/PRC_curve.png){alt="PRC Curve" height="auto"}
+
+</p>
 
 These plots illustrate the strong discriminative power of the **m6APrediction** random forest model.
 
